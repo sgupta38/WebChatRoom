@@ -8,7 +8,14 @@
 <link href="/styles.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Yes, you can see me!!</h1>
+    <div id="Edge-Chat">
+        <div id="Chat-window">
+            <div id="output"></div>
+        </div>
+        <input id="handle" type="text" placeholder="Handle"/>
+        <input id="message" type="text" placeholder="Message"/>
+        <button id="send">Send</button>
+    </div>
     <!-- Here, we are giving the reference of our custom javascript file, in which we are going to handle all of our socket operations -->
     <script src="/chat.js"></script>
 </body>

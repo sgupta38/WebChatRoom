@@ -22,4 +22,12 @@ var io = socket(server);
 
 io.on('connection', function(socket){
     console.log('successfully made socket connection', socket.id);
+
+    // Note: Here, we are listening for 'chat' event on 'SOCKET' instance
+    socket.on('chat', function(data){
+        console.log('chat message received')
+
+        //Followint 'io.sockets' will emit the message to all the connected clients.
+        io.sockets.emit('chat', data);
+    });
 });
